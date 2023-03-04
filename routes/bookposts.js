@@ -1,0 +1,11 @@
+const express = require('express')
+const router = express.Router()
+const { myPosts, createPost, allPosts, toTrade, tradeBooks, acceptTrade, declineTrade, rateBooks,} = require('../controller/posts')
+
+router.route('/books').get(myPosts).post(createPost)
+router.get('/allposts', allPosts)
+router.get('/trade', toTrade)
+router.route('/:wantsId/trade/:offersId').get(tradeBooks)
+router.get('/trade/:id/accept', acceptTrade)
+router.get('/trade/:id/decline', declineTrade)
+router.route('/rating/:bookId').post(rateBooks)
