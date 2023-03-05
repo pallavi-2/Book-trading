@@ -21,6 +21,10 @@ const TradeSchema = new mongoose.Schema({
         email:{
             type:String,
             required:true
+        },
+        userId:{
+            type:String,
+            required:true
         }
     },
     wantedUser:{
@@ -29,6 +33,10 @@ const TradeSchema = new mongoose.Schema({
             required:true
         },
         email:{
+            type:String,
+            required:true
+        },
+        userId:{
             type:String,
             required:true
         }
